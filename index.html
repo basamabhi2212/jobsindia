@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobsIndia - Latest Job Updates in India</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8086421927457124"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <h1><i class="fas fa-briefcase"></i> JobsIndia</h1>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li class="nav-item"><a href="#jobs" class="nav-link" data-section="jobs">Jobs</a></li>
+                <li class="nav-item"><a href="#admin" class="nav-link" data-section="admin">Post Job</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>Find Your Dream Job in India</h2>
+                    <p>Discover the latest opportunities in Government, IT, Banking and more sectors</p>
+                    <a href="#jobs" class="btn primary-btn" data-section="jobs">Explore Jobs</a>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="section-title">
+                    <h2>Job Categories</h2>
+                    <p>Browse through different job sectors</p>
+                </div>
+
+                <div class="categories-container">
+                    <div class="category-card" data-category="government">
+                        <div class="category-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <h3>Government Jobs</h3>
+                        <p>Stable and secure positions in government sectors</p>
+                        <a href="#jobs" class="btn category-btn" data-category="government" data-section="jobs">View Jobs</a>
+                    </div>
+                    
+                    <div class="category-card" data-category="it">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>IT Jobs</h3>
+                        <p>Opportunities in software, hardware and IT services</p>
+                        <a href="#jobs" class="btn category-btn" data-category="it" data-section="jobs">View Jobs</a>
+                    </div>
+                    
+                    <div class="category-card" data-category="banking">
+                        <div class="category-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>Banking Jobs</h3>
+                        <p>Career options in public and private banking sectors</p>
+                        <a href="#jobs" class="btn category-btn" data-category="banking" data-section="jobs">View Jobs</a>
+                    </div>
+                    
+                    <div class="category-card" data-category="healthcare">
+                        <div class="category-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Healthcare Jobs</h3>
+                        <p>Opportunities in medical and healthcare industries</p>
+                        <a href="#jobs" class="btn category-btn" data-category="healthcare" data-section="jobs">View Jobs</a>
+                    </div>
+                </div>
+
+                <div class="recent-jobs">
+                    <div class="section-title">
+                        <h2>Latest Job Postings</h2>
+                        <p>Recent opportunities from across India</p>
+                    </div>
+                    
+                    <!-- Home Page Ad - Block Format -->
+                    <div class="ad-container home-ad">
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8086421927457124"
+                                crossorigin="anonymous"></script>
+                        <!-- careercanvas -->
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-8086421927457124"
+                             data-ad-slot="1098092072"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                    
+                    <div id="recent-jobs-list" class="jobs-container">
+                        <!-- Recent jobs will be loaded here dynamically -->
+                    </div>
+                    <div class="view-all-container">
+                        <a href="#jobs" class="btn secondary-btn" data-section="jobs">View All Jobs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jobs Section -->
+        <section id="jobs" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Browse All Jobs</h2>
+                    <p>Find the perfect opportunity for your career</p>
+                </div>
+
+                <div class="filter-container">
+                    <div class="search-box">
+                        <input type="text" id="job-search" placeholder="Search for jobs...">
+                        <button id="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="filter-options">
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="government">Government</option>
+                            <option value="it">IT</option>
+                            <option value="banking">Banking</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <select id="date-filter">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="jobs-list" class="jobs-container">
+                    <!-- Jobs will be loaded here dynamically -->
+                </div>
+                
+                <!-- Jobs Page Ad - Relaxed Format -->
+                <div class="ad-container jobs-ad">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8086421927457124"
+                            crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-format="autorelaxed"
+                         data-ad-client="ca-pub-8086421927457124"
+                         data-ad-slot="4372505569"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <div id="no-jobs-message" class="no-content-message" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>No jobs match your search criteria</h3>
+                    <p>Try modifying your search or browse all available jobs</p>
+                    <button id="reset-filters" class="btn secondary-btn">Reset Filters</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Job Details Section -->
+        <section id="job-details" class="section">
+            <div class="container">
+                <div class="back-button">
+                    <a href="#jobs" class="btn secondary-btn" data-section="jobs">
+                        <i class="fas fa-arrow-left"></i> Back to Jobs
+                    </a>
+                </div>
+                <div id="job-details-content">
+                    <!-- Job details will be loaded here dynamically -->
+                </div>
+                
+                <!-- Job Details Page Ad -->
+                <div class="ad-container job-details-ad">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8086421927457124"
+                            crossorigin="anonymous"></script>
+                    <!-- careercanvas -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-8086421927457124"
+                         data-ad-slot="1098092072"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Section -->
+        <section id="admin" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Admin Area</h2>
+                    <p>Login to post new jobs</p>
+                </div>
+
+                <div id="admin-login-container" class="admin-form-container">
+                    <form id="admin-login-form" class="admin-form">
+                        <div class="form-group">
+                            <label for="admin-username">Username <span class="required">*</span></label>
+                            <input type="text" id="admin-username" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="admin-password-login">Password <span class="required">*</span></label>
+                            <input type="password" id="admin-password-login" required>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn primary-btn">Login</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="admin-job-form-container" class="admin-form-container" style="display: none;">
+                    <div class="admin-header">
+                        <h3>Welcome, Admin!</h3>
+                        <button id="admin-logout" class="btn secondary-btn">Logout</button>
+                    </div>
+                    
+                    <div class="admin-tabs">
+                        <button class="tab-btn active" data-tab="job-posting">Post Job</button>
+                        <button class="tab-btn" data-tab="manage-jobs">Manage Jobs</button>
+                        <button class="tab-btn" data-tab="user-management">Manage Users</button>
+                        <button class="tab-btn" data-tab="change-password">Change Password</button>
+                    </div>
+                    
+                    <div id="job-posting-tab" class="tab-content active">
+                        <form id="job-form" class="admin-form">
+                            <div class="form-group">
+                                <label for="job-title">Job Title <span class="required">*</span></label>
+                                <input type="text" id="job-title" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="job-company">Company Name <span class="required">*</span></label>
+                                <input type="text" id="job-company" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="job-location">Location <span class="required">*</span></label>
+                                <input type="text" id="job-location" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="job-category">Category <span class="required">*</span></label>
+                                <select id="job-category" required>
+                                    <option value="">Select a category</option>
+                                    <option value="government">Government</option>
+                                    <option value="it">IT</option>
+                                    <option value="banking">Banking</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="job-type">Job Type <span class="required">*</span></label>
+                                    <select id="job-type" required>
+                                        <option value="Full-time">Full-time</option>
+                                        <option value="Part-time">Part-time</option>
+                                        <option value="Contract">Contract</option>
+                                        <option value="Freelance">Freelance</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="job-experience">Experience Level <span class="required">*</span></label>
+                                    <select id="job-experience" required>
+                                        <option value="Entry Level">Entry Level</option>
+                                        <option value="Mid Level">Mid Level</option>
+                                        <option value="Senior Level">Senior Level</option>
+                                        <option value="Executive">Executive</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="job-salary">Salary Range</label>
+                                <input type="text" id="job-salary" placeholder="e.g., ₹5,00,000 - ₹8,00,000 per annum">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="job-description">Job Description <span class="required">*</span></label>
+                                <textarea id="job-description" rows="6" required placeholder="Describe the job role, responsibilities, and requirements..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="job-requirements">Requirements</label>
+                                <textarea id="job-requirements" rows="4" placeholder="List the required qualifications, skills, and experience..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="job-application-url">Application URL</label>
+                                <input type="url" id="job-application-url" placeholder="https://example.com/apply">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="job-contact-email">Contact Email</label>
+                                <input type="email" id="job-contact-email" placeholder="contact@company.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="job-deadline">Application Deadline</label>
+                                <input type="date" id="job-deadline">
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn primary-btn">Post Job</button>
+                                <button type="reset" class="btn secondary-btn">Clear Form</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div id="manage-jobs-tab" class="tab-content">
+                        <div class="manage-jobs-header">
+                            <h3>Manage Posted Jobs</h3>
+                            <button id="export-excel" class="btn secondary-btn">
+                                <i class="fas fa-file-excel"></i> Export to Excel
+                            </button>
+                        </div>
+                        <div id="admin-jobs-list" class="admin-jobs-container">
+                            <!-- Admin job management will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <div id="user-management-tab" class="tab-content">
+                        <div class="manage-users-header">
+                            <h3>Manage Users</h3>
+                            <button id="add-user-btn" class="btn primary-btn">
+                                <i class="fas fa-user-plus"></i> Add New User
+                            </button>
+                        </div>
+                        
+                        <!-- Add User Form (initially hidden) -->
+                        <div id="add-user-form" class="admin-form" style="display: none;">
+                            <h4>Add New User</h4>
+                            <form id="user-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="user-username">Username <span class="required">*</span></label>
+                                        <input type="text" id="user-username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="user-email">Email <span class="required">*</span></label>
+                                        <input type="email" id="user-email" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="user-password">Password <span class="required">*</span></label>
+                                        <input type="password" id="user-password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="user-admin">Admin Access</label>
+                                        <select id="user-admin">
+                                            <option value="false">Regular User</option>
+                                            <option value="true">Admin User</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn primary-btn">Create User</button>
+                                    <button type="button" id="cancel-add-user" class="btn secondary-btn">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div id="users-list" class="admin-users-container">
+                            <!-- Users list will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <div id="change-password-tab" class="tab-content">
+                        <div class="change-password-container">
+                            <h3>Change Password</h3>
+                            <form id="change-password-form" class="admin-form">
+                                <div class="form-group">
+                                    <label for="current-password">Current Password <span class="required">*</span></label>
+                                    <input type="password" id="current-password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-password">New Password <span class="required">*</span></label>
+                                    <input type="password" id="new-password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-password">Confirm New Password <span class="required">*</span></label>
+                                    <input type="password" id="confirm-password" required>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn primary-btn">Change Password</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                    <p>Get in touch with us for any queries or support</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p>contact@jobsindia.com</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <h3>Phone</h3>
+                            <p>+91 12345 67890</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Address</h3>
+                            <p>123 Job Street, Career City, India - 110001</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="contact-name">Name <span class="required">*</span></label>
+                                <input type="text" id="contact-name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-email">Email <span class="required">*</span></label>
+                                <input type="email" id="contact-email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-subject">Subject <span class="required">*</span></label>
+                                <input type="text" id="contact-subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-message">Message <span class="required">*</span></label>
+                                <textarea id="contact-message" rows="5" required></textarea>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn primary-btn">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" style="display: none;">
+        <div class="toast-content">
+            <span class="toast-icon"></span>
+            <span class="toast-message"></span>
+        </div>
+        <button class="toast-close">&times;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-briefcase"></i> JobsIndia</h3>
+                    <p>Your trusted partner in finding the perfect career opportunities across India.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-section="home">Home</a></li>
+                        <li><a href="#jobs" data-section="jobs">Jobs</a></li>
+                        <li><a href="#admin" data-section="admin">Post Job</a></li>
+                        <li><a href="#contact" data-section="contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Job Categories</h4>
+                    <ul>
+                        <li><a href="#jobs" data-section="jobs" data-category="government">Government</a></li>
+                        <li><a href="#jobs" data-section="jobs" data-category="it">IT</a></li>
+                        <li><a href="#jobs" data-section="jobs" data-category="banking">Banking</a></li>
+                        <li><a href="#jobs" data-section="jobs" data-category="healthcare">Healthcare</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 JobsIndia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" style="display: none;">
+        <div class="toast-content">
+            <i class="toast-icon"></i> 
+            <span class="toast-message"></span>
+        </div>
+        <button class="toast-close">&times;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

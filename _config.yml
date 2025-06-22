@@ -1,0 +1,65 @@
+title: JobsIndia - Job Portal
+description: Comprehensive job portal for opportunities across India in Government, IT, Banking, Healthcare and other sectors
+url: "https://basamabhi2212.github.io"
+baseurl: "/jobsindia"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Exclude files from processing
+exclude:
+  - "*.py"
+  - "*.pyc"
+  - "__pycache__/"
+  - "requirements.txt"
+  - "pyproject.toml"
+  - "uv.lock"
+  - ".replit"
+  - "replit.md"
+
+# Include files that start with underscores
+include:
+  - "_config.yml"
+
+# Collections
+collections:
+  jobs:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "jobs"
+    values:
+      layout: "job"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO settings
+author: JobsIndia Team
+social:
+  name: JobsIndia
+  links:
+    - https://github.com/yourusername/jobsindia
+
+# Google Analytics (optional)
+google_analytics: G-XXXXXXXXXX
+
+# Site navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Jobs
+    url: /jobs
+  - title: Admin
+    url: /admin
+  - title: Contact
+    url: /contact

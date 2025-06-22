@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobsIndia - Latest Job Updates in India</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8086421927457124"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-briefcase"></i> JobsIndia</h1>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                    <li class="nav-item"><a href="#jobs" class="nav-link" data-section="jobs">Jobs</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>Find Your Dream Job in India</h2>
+                    <p>Discover the latest opportunities in Government, IT, Banking and more sectors</p>
+                    <a href="#jobs" class="btn primary-btn" data-section="jobs">Explore Jobs</a>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="section-title">
+                    <h2>Job Categories</h2>
+                    <p>Browse through different job sectors</p>
+                </div>
+
+                <div class="categories-container">
+                    <div class="category-card" data-category="government">
+                        <div class="category-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <h3>Government Jobs</h3>
+                        <p>Stable and secure positions in government sectors</p>
+                        <a href="#jobs" class="btn category-btn" data-category="government" data-section="jobs">View Jobs</a>
+                    </div>
+                    
+                    <div class="category-card" data-category="it">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>IT Jobs</h3>
+                        <p>Opportunities in software, hardware and IT services</p>
+                        <a href="#jobs" class="btn category-btn" data-category="it" data-section="jobs">View Jobs</a>
+                    </div>
+                    
+                    <div class="category-card" data-category="banking">
+                        <div class="category-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>Banking Jobs</h3>
+                        <p>Career options in public and private banking sectors</p>
+                        <a href="#jobs" class="btn category-btn" data-category="banking" data-section="jobs">View Jobs</a>
+                    </div>
+                    
+                    <div class="category-card" data-category="healthcare">
+                        <div class="category-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Healthcare Jobs</h3>
+                        <p>Opportunities in medical and healthcare industries</p>
+                        <a href="#jobs" class="btn category-btn" data-category="healthcare" data-section="jobs">View Jobs</a>
+                    </div>
+                </div>
+
+                <div class="recent-jobs">
+                    <div class="section-title">
+                        <h2>Latest Job Postings</h2>
+                        <p>Recent opportunities from across India</p>
+                    </div>
+                    
+                    <!-- Home Page Ad - Block Format -->
+                    <div class="ad-container home-ad">
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8086421927457124"
+                                crossorigin="anonymous"></script>
+                        <!-- careercanvas -->
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-8086421927457124"
+                             data-ad-slot="1098092072"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                    
+                    <div id="recent-jobs-list" class="jobs-container">
+                        <!-- Recent jobs will be loaded here dynamically -->
+                    </div>
+                    <div class="view-all-container">
+                        <a href="#jobs" class="btn secondary-btn" data-section="jobs">View All Jobs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jobs Section -->
+        <section id="jobs" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Browse All Jobs</h2>
+                    <p>Find the perfect opportunity for your career</p>
+                </div>
+
+                <div class="filter-container">
+                    <div class="search-box">
+                        <input type="text" id="job-search" placeholder="Search for jobs...">
+                        <button id="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="filter-options">
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="government">Government</option>
+                            <option value="it">IT</option>
+                            <option value="banking">Banking</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <select id="date-filter">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="jobs-list" class="jobs-container">
+                    <!-- Jobs will be loaded here dynamically -->
+                </div>
+                
+                <!-- Jobs Page Ad - Relaxed Format -->
+                <div class="ad-container jobs-ad">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8086421927457124"
+                            crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-format="autorelaxed"
+                         data-ad-client="ca-pub-8086421927457124"
+                         data-ad-slot="4372505569"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <div id="no-jobs-message" class="no-content-message" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>No jobs match your search criteria</h3>
+                    <p>Try modifying your search or browse all available jobs</p>
+                    <button id="reset-filters" class="btn secondary-btn">Reset Filters</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                    <p>Get in touch with us for any queries or support</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>contact@jobsindia.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Address</h3>
+                                <p>123 Business Hub, Delhi, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="contact-name">Name <span class="required">*</span></label>
+                                <input type="text" id="contact-name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-email">Email <span class="required">*</span></label>
+                                <input type="email" id="contact-email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-subject">Subject <span class="required">*</span></label>
+                                <input type="text" id="contact-subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-message">Message <span class="required">*</span></label>
+                                <textarea id="contact-message" rows="5" required></textarea>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn primary-btn">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-briefcase"></i> JobsIndia</h3>
+                    <p>Your trusted partner in finding the perfect career opportunities across India.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-section="home">Home</a></li>
+                        <li><a href="#jobs" data-section="jobs">Jobs</a></li>
+                        <li><a href="#contact" data-section="contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Job Categories</h4>
+                    <ul>
+                        <li><a href="#jobs" data-section="jobs" data-category="government">Government</a></li>
+                        <li><a href="#jobs" data-section="jobs" data-category="it">IT</a></li>
+                        <li><a href="#jobs" data-section="jobs" data-category="banking">Banking</a></li>
+                        <li><a href="#jobs" data-section="jobs" data-category="healthcare">Healthcare</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 JobsIndia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Static JavaScript for GitHub Pages -->
+    <script src="./static-script.js"></script>
+</body>
+</html>
